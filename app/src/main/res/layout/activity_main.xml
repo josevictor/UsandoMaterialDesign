@@ -6,14 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:background="#2A5E8C">
+        android:background="#FFFFFF">
 
     <com.google.android.material.bottomappbar.BottomAppBar
             android:layout_width="match_parent"
             android:layout_gravity="bottom"
             android:id="@+id/app_bar"
             android:layout_height="?attr/actionBarSize"
-            app:backgroundTint="#BF2188"/>
+            app:backgroundTint="#3F51B5"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
@@ -21,18 +21,31 @@
             app:fabSize="normal"
             app:layout_anchor="@id/app_bar"
             android:src="@drawable/ic_share_24px"
-            android:id="@+id/buttonFloat" app:backgroundTint="@android:color/background_light"/>
+            android:id="@+id/buttonFloat"
+            app:backgroundTint="#E91E63"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="356dp"
-            android:layout_height="354dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:layout_marginTop="-170dp"
+            android:src="@drawable/person"
+            android:id="@+id/imageView_photo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             app:civ_border_width="10dp"
-            app:civ_border_color="#FFFFFF"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_person_24px"
-            android:id="@+id/imageView_photo"/>
+            app:civ_border_color="#3F51B5"
+            android:scaleType="centerCrop"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_a_photo_24px"
+            android:id="@+id/take_photo" app:layout_anchorGravity="bottom|center"
+            app:layout_anchor="@+id/imageView_photo"
+    />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
